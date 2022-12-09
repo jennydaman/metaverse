@@ -5,7 +5,7 @@ import { loadFonts } from './plugins/webfontloader'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import metaverse101Article from "./pages/metaverse-101-article.vue";
 import metaverseAbout from "./pages/metaverse-about.vue";
 import metaverseHome from "./pages/metaverse-home.vue";
@@ -18,17 +18,17 @@ import metaverseInterpersonalRelationships from "./pages/case-studies/metaverse-
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
-    { path: '/metaverse/', component: metaverseHome },
-    { path: '/metaverse/about/', component: metaverseAbout },
-    { path: '/metaverse/101/', component: metaverse101Article },
-    { path: '/metaverse/interpersonal-relationships/', component: metaverseInterpersonalRelationships },
-    { path: '/metaverse/health-case/', component: metaverseHealthCase },
-    { path: '/metaverse/entertainment/', component: metaverseEntertainment },
-    { path: '/metaverse/meet-the-experts/', component: metaverseMeetTheExperts },
+    { path: '/', component: metaverseHome },
+    { path: '/about', component: metaverseAbout },
+    { path: '/101', component: metaverse101Article },
+    { path: '/interpersonal-relationships', component: metaverseInterpersonalRelationships },
+    { path: '/health-case', component: metaverseHealthCase },
+    { path: '/entertainment', component: metaverseEntertainment },
+    { path: '/meet-the-experts', component: metaverseMeetTheExperts },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 
